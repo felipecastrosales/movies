@@ -35,13 +35,21 @@ class _HomePageState extends State<HomePage> {
                 valueListenable: _controller.movies,
                 builder: (_, movies, __) {
                   return Visibility(
-                  visible: movies != null,
-                    child: Text(
-                      'Movies',
-                      style: Theme.of(context).textTheme.headline3,
+                    visible: movies != null,
+                    child: Column(
+                      children: [
+                        Text(
+                          'Movies',
+                          style: Theme.of(context).textTheme.headline3,
+                        ),
+                        const SizedBox(height: 20),
+                        TextField(
+                          onChanged: _controller.onChanged,
+                        ),
+                      ],
                     ),
                   );
-                }
+                },
               ),
               ValueListenableBuilder<Movies?>(
                 valueListenable: _controller.movies,
