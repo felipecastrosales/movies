@@ -13,15 +13,26 @@ class CustomListCardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 200,
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         color: Colors.black54,
+        borderRadius: BorderRadius.circular(15),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Image.network(
-            API.REQUEST_IMG(
-              movie.posterPath,
+          ClipRRect(
+            borderRadius: const BorderRadius.only(
+              topLeft: Radius.circular(15),
+              bottomLeft: Radius.circular(15),
+            ),
+            child: Image.network(
+              API.REQUEST_IMG(movie.posterPath),
+              loadingBuilder: (_, child, progress) {
+                if (progress == null) return child;
+                return const Center(
+                  child: CircularProgressIndicator.adaptive(),
+                );
+              },
             ),
           ),
           Expanded(
@@ -50,7 +61,5 @@ class CustomListCardWidget extends StatelessWidget {
         ],
       ),
     );
-
-    //    Text(movie.title))/
   }
 }
