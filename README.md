@@ -1,16 +1,42 @@
-# movies
+<h1 align="center">Movies 🎬</a></h1>
 
-A new Flutter project.
+---
 
-## Getting Started
+<h2 align="center">App 🎨</h2>
 
-This project is a starting point for a Flutter application.
+   <p align="center">
+      <img alt="Movies Demo" width="400" title="Movies Demo" src="https://user-images.githubusercontent.com/59374587/153775969-d7aebff7-7a90-4d9c-bbf3-3a32ac8ed40a.gif" />
+   </p>
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+<h2 align="center">How to Use 🤔</h2>
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+   ```
+   First of all, correctly configure the Flutter development environment on your machine, see https://flutter.dev/docs/get-started/install
+   
+   - Clone this repository:
+   $ git clone https://github.com/felipecastrosales/movies
+
+   - Enter in directory:
+   $ cd movies
+
+   - For install dependencies:
+   $ flutter pub get
+
+   - Run the app: 
+   $ flutter run
+   ```
+
+---
+
+>This project was developed with ❤️ by **[@Felipe Sales](https://www.linkedin.com/in/felipecastrosales/)**, and the instructor [@Deivid Willyan](https://www.linkedin.com/in/deivid-willyan-19776abb/).<br>
+If it helped you, give ⭐, contribute, it will help me too 😉
+
+---
+
+   <div align="center">
+
+   [![Linkedin Badge](https://img.shields.io/badge/-Felipe%20Sales-292929?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/felipecastrosales/)](https://www.linkedin.com/in/felipecastrosales/)
+
+   </div>
