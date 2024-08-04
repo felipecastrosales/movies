@@ -4,7 +4,11 @@ import 'package:movies/models/movies_model.dart';
 import 'package:movies/utils/apis_utils.dart';
 
 class DetailsPage extends StatelessWidget {
-  const DetailsPage({Key? key, required this.movie}) : super(key: key);
+  const DetailsPage({
+    super.key,
+    required this.movie,
+  });
+
   final Movie movie;
 
   @override
@@ -44,7 +48,7 @@ class DetailsPage extends StatelessWidget {
                   Expanded(
                     child: Text(
                       movie.title,
-                      style: Theme.of(context).textTheme.headline6,
+                      style: Theme.of(context).textTheme.titleLarge,
                     ),
                   ),
                 ],
@@ -56,7 +60,7 @@ class DetailsPage extends StatelessWidget {
                   Expanded(
                     child: Text(
                       movie.originalTitle,
-                      style: Theme.of(context).textTheme.headline6,
+                      style: Theme.of(context).textTheme.titleLarge,
                     ),
                   ),
                 ],

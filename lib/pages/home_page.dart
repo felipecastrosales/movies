@@ -10,7 +10,7 @@ import 'package:movies/service/dio_service_impl.dart';
 import 'package:movies/widgets/custom_list_card_widget.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -44,12 +44,13 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         Text(
                           'Movies',
-                          style: Theme.of(context).textTheme.headline3,
+                          style: Theme.of(context).textTheme.displaySmall,
                         ),
                         const SizedBox(height: 20),
                         TextField(
                           onChanged: _controller.onChanged,
                         ),
+                        const SizedBox(height: 8),
                       ],
                     ),
                   );

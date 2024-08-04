@@ -5,15 +5,17 @@ import 'package:movies/utils/apis_utils.dart';
 
 class CustomListCardWidget extends StatelessWidget {
   const CustomListCardWidget({
-    Key? key,
+    super.key,
     required this.movie,
-  }) : super(key: key);
+  });
+
   final Movie movie;
 
   @override
   Widget build(BuildContext context) {
     return Material(
       child: InkWell(
+        borderRadius: BorderRadius.circular(8),
         onTap: () {
           Navigator.push(
             context,
@@ -27,7 +29,7 @@ class CustomListCardWidget extends StatelessWidget {
           height: 200,
           decoration: BoxDecoration(
             color: Colors.black54,
-            borderRadius: BorderRadius.circular(15),
+            borderRadius: BorderRadius.circular(8),
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -58,16 +60,16 @@ class CustomListCardWidget extends StatelessWidget {
                     children: [
                       Text(
                         movie.title,
-                        style: Theme.of(context).textTheme.headline6,
+                        style: Theme.of(context).textTheme.titleLarge,
                         softWrap: true,
                         overflow: TextOverflow.ellipsis,
                       ),
                       const Spacer(),
                       Text(
-                        'Popularity: ' + movie.popularity.toString(),
+                        'Popularity: ${movie.popularity}',
                       ),
                       Text(
-                        'Votes: ' + movie.voteAverage.toString(),
+                        'Votes: ${movie.voteAverage}',
                       ),
                     ],
                   ),
